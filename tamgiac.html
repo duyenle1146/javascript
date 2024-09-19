@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function tamGiacCanRong(){
+        //độ cao của tam giác
+        let N = prompt("Nhập độ cao của tam giác");
+        N = parseInt(N);
+        //dùng vòng lặp để tạo cột i
+        for (let i = 0; i < N - 1; i++){
+            //dùng vòng lặp để tạo hàng j và in khoảng trắng
+            for (let j = 1; j <= N + i; j++){
+            // document.writeln("_");
+            //ktra đk để in ra khoảng trắng hoặc dấu sao
+                if(j == N - i || j == N + i){
+                document.writeln("*");
+            }
+                else{
+                document.writeln("_");
+            }
+        }
+        //dùng vòng lặp để tạo hàng k và in dấu sao
+        // for (let k = 1; k <= 2*i-1; k++){
+        //     document.writeln("*");
+        // }
+        document.writeln("</br>");
+       }
+       for (let i = 1; i <= 2 * N - 1; i++){
+        document.writeln("*");
+       }
+    }
+</script>
+<body>
+    <h1>bài tập tam giác </h1><br>
+    <button onclick="tamGiacCan()">tam giác cân</button>
+    <button onclick="tamGiac()">tamGiac</button>
+    <button onclick="tamGiacCanRong()">tamgiaccanrong</button>
+</body>
+</html>
